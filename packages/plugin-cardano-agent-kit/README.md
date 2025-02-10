@@ -10,17 +10,6 @@ A plugin for integrating **Cardano** blockchain functionalities into **ElizaOS a
 
 The **Cardano Agent Kit Plugin** provides seamless integration with the **Cardano blockchain**, allowing agents to manage wallets, sign transactions, query blockchain data, and interact with smart contracts. This plugin is built using [`cardano-agent-kit`](https://www.npmjs.com/package/cardano-agent-kit), ensuring compatibility with Cardano-based applications.  
 
-## **Installation**  
-
-```bash
-pnpm install @elizaos/plugin-cardano-agent-kit
-```
-
-or with npm:
-
-```bash
-npm install @elizaos/plugin-cardano-agent-kit
-```
 
 ## **Features**  
 
@@ -70,33 +59,10 @@ npm install @elizaos/plugin-cardano-agent-kit
 - Retrieves transaction details and balances  
 - Fetches staking and delegation information  
 
-## **Development**  
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/elizaos/plugin-cardano-agent-kit.git
-   cd plugin-cardano-agent-kit
-   ```
-
-2. Install dependencies:
-   ```bash
-   pnpm install
-   ```
-
-3. Build the plugin:
-   ```bash
-   pnpm run build
-   ```
-
-4. Run linting:
-   ```bash
-   pnpm run lint
-   ```
 
 ## **Dependencies**  
 
 - [`cardano-agent-kit`](https://www.npmjs.com/package/cardano-agent-kit)  
-- [`@elizaos/core`](https://github.com/elizaos/core)  
 
 ## **Future Enhancements**  
 
