@@ -1,178 +1,149 @@
-# @elizaos/plugin-bootstrap
+Here's a README for your **ElizaOS plugin** using **npm cardano-agent-kit**:  
 
-A plugin providing core functionality and basic actions for ElizaOS agents.
+---
 
-## Description
+# **@elizaos/plugin-cardano-agent-kit**  
 
-The Bootstrap plugin enables fundamental agent behaviors including conversation management, room interactions, and fact tracking. It provides essential actions and evaluators that form the foundation of agent interactions.
+A plugin for integrating **Cardano** blockchain functionalities into **ElizaOS agents**, enabling transaction management, wallet operations, and blockchain interactions.  
 
-## Installation
+## **Description**  
+
+The **Cardano Agent Kit Plugin** provides seamless integration with the **Cardano blockchain**, allowing agents to manage wallets, sign transactions, query blockchain data, and interact with smart contracts. This plugin is built using [`cardano-agent-kit`](https://www.npmjs.com/package/cardano-agent-kit), ensuring compatibility with Cardano-based applications.  
+
+## **Installation**  
 
 ```bash
-pnpm install @elizaos/plugin-bootstrap
+pnpm install @elizaos/plugin-cardano-agent-kit
 ```
 
-## Features
+or with npm:
 
-### 1. Conversation Management
+```bash
+npm install @elizaos/plugin-cardano-agent-kit
+```
 
-- NONE action for basic responses
-- CONTINUE action for follow-ups
-- IGNORE action for appropriate disengagement
-- Built-in conversation flow control
+## **Features**  
 
-### 2. Room Control
+### 1. **Wallet Management**  
 
-- Follow/Unfollow room functionality
-- Mute/Unmute capabilities
-- Automatic engagement level tracking
-- Smart participation management
+- Generate new Cardano wallets  
+- Import existing wallets using mnemonics  
+- Derive wallet addresses  
+- Export wallet keys securely  
 
-### 3. Fact Management
+### 2. **Transaction Handling**  
 
-- Automatic fact extraction
-- Categorization of claims
-- Deduplication of known information
-- Support for multiple fact types:
-    - Permanent facts
-    - Status updates
-    - Opinions
-    - Biographical information
+- Build, sign, and submit transactions  
+- Send ADA and tokens to multiple recipients  
+- Estimate transaction fees  
+- Support for multi-signature transactions  
 
-### 4. Goal Tracking
+### 3. **Smart Contract Interaction**  
 
-- Track objective progress
-- Update goal statuses
-- Monitor completion states
-- Automatic progress evaluation
+- Query smart contract states  
+- Submit contract execution transactions  
+- Fetch on-chain contract data  
 
-## Providers
+### 4. **Blockchain Querying**  
 
-### 1. Boredom Provider
+- Get the latest blockchain slot and epoch information  
+- Query transaction history and UTXOs  
+- Fetch account balances  
 
-- Tracks engagement levels
-- Provides status messages
-- Monitors conversation quality
-- Adjusts participation accordingly
+## **Providers**  
 
-### 2. Facts Provider
+### 1. **Wallet Provider**  
 
-- Manages fact database
-- Retrieves relevant information
-- Formats fact summaries
-- Maintains fact context
+- Manages Cardano wallet creation and retrieval  
+- Stores encrypted wallet credentials  
+- Provides secure signing operations  
 
-### 3. Time Provider
+### 2. **Transaction Provider**  
 
-- Provides UTC timestamps
-- Human-readable formatting
-- Time-based operation support
+- Handles transaction construction and fee estimation  
+- Ensures efficient UTXO selection  
+- Broadcasts transactions to the Cardano network  
 
-## Development
+### 3. **Blockchain Provider**  
 
-1. Clone the repository
+- Queries live blockchain data  
+- Retrieves transaction details and balances  
+- Fetches staking and delegation information  
+
+## **Development**  
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/elizaos/plugin-cardano-agent-kit.git
+   cd plugin-cardano-agent-kit
+   ```
+
 2. Install dependencies:
-
-```bash
-pnpm install
-```
+   ```bash
+   pnpm install
+   ```
 
 3. Build the plugin:
-
-```bash
-pnpm run build
-```
+   ```bash
+   pnpm run build
+   ```
 
 4. Run linting:
+   ```bash
+   pnpm run lint
+   ```
 
-```bash
-pnpm run lint
-```
+## **Dependencies**  
 
-## Dependencies
+- [`cardano-agent-kit`](https://www.npmjs.com/package/cardano-agent-kit)  
+- [`@elizaos/core`](https://github.com/elizaos/core)  
 
-- @elizaos/core: workspace:\*
+## **Future Enhancements**  
 
-## Future Enhancements
+1. **Enhanced Wallet Security**  
+   - Hardware wallet support (Ledger, Trezor)  
+   - Multi-factor authentication for transactions  
+   - Encrypted mnemonic storage  
 
-1. **Enhanced Conversation Management**
+2. **Advanced Smart Contract Integration**  
+   - Off-chain contract execution  
+   - Custom Plutus script interaction  
+   - Smart contract monitoring and alerts  
 
-    - Advanced context tracking
-    - Multi-thread conversation support
-    - Conversation state persistence
-    - Improved conversation flow control
-    - Natural language understanding improvements
+3. **Improved Transaction Efficiency**  
+   - Fee optimization strategies  
+   - Batch transaction support  
+   - Faster UTXO selection algorithms  
 
-2. **Advanced Room Control**
+4. **Cardano Governance & Staking**  
+   - Delegate ADA to staking pools  
+   - Governance voting system integration  
+   - Staking reward tracking  
 
-    - Dynamic room creation and management
-    - Room permission system
-    - Advanced moderation tools
-    - Room analytics and insights
-    - Cross-room communication features
+5. **Developer Tooling**  
+   - Improved debugging tools  
+   - Unit and integration test coverage  
+   - Plugin API documentation generator  
 
-3. **Expanded Fact Management**
+6. **Integration with Other Blockchains**  
+   - Cross-chain asset transfers  
+   - Multi-chain transaction support  
 
-    - Enhanced fact verification system
-    - Fact relationship mapping
-    - Automated fact updating
-    - Fact confidence scoring
-    - Cross-reference system
-    - Fact expiration management
+## **Contributing**  
 
-4. **Goal System Improvements**
+Contributions are welcome! See the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details.  
 
-    - Multi-step goal planning
-    - Goal dependency tracking
-    - Progress visualization
-    - Goal priority management
-    - Automated milestone tracking
-    - Goal optimization suggestions
+## **Credits**  
 
-5. **Provider Enhancements**
+Special thanks to:  
 
-    - Improved boredom detection
-    - Advanced engagement metrics
-    - Enhanced fact retrieval algorithms
-    - Real-time status updates
-    - Provider performance analytics
+- The **Cardano Developer Community**  
+- The **ElizaOS team** for blockchain integration support  
 
-6. **Memory Management**
+## **License**  
 
-    - Enhanced memory prioritization
-    - Memory compression techniques
-    - Long-term memory storage
-    - Memory relationship mapping
-    - Context-aware recall
+This plugin is part of the **ElizaOS** ecosystem. See the main project repository for licensing details.  
 
-7. **Developer Tools**
+---
 
-    - Enhanced debugging capabilities
-    - Testing framework improvements
-    - Plugin development templates
-    - Documentation generator
-    - Performance profiling tools
-
-8. **Integration Features**
-    - Enhanced plugin interoperability
-    - External service connectors
-    - API gateway integration
-    - Webhook system improvements
-    - Third-party platform support
-
-We welcome community feedback and contributions to help prioritize these enhancements.
-
-## Contributing
-
-Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
-
-## Credits
-
-Special thanks to:
-
-- The Eliza Core development team
-- The Eliza community for their contributions and feedback
-
-## License
-
-This plugin is part of the Eliza project. See the main project repository for license information.
+Let me know if you need any modifications! 🚀
